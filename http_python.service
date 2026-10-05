@@ -1,0 +1,13 @@
+[Unit]
+Description=Python http app
+After=network-online.target
+
+[Service]
+User=webuser
+Group=webuser
+WorkingDirectory=/var/www/http_python
+ExecStart=/var/www/http_python/venv/bin/python /var/www/http_python/Lab_13_http.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
